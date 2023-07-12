@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTN Task</title>
+    <style>
+        button{
+            border: none;
+        }
+        #html{
+            background-color: red;
+        }
+        #css{
+            background-color: bisque;
+        }
+        #content{
+            width: 20%;
+            padding: 5%;
+            background-color: bisque;
+            border-radius: 100%;
+        }
+    </style>
+</head>
+<body>
+    
+    <button id="html" onclick="document.getElementById('content').innerHTML='<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti vero eaque optio provident quasi perferendis facilis inventore tempore ducimus dolores.</p>'">html</button>
+    <button id="css" onclick="document.getElementById('content').innerHTML='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti vero eaque optio provident quasi perferendis facilis inventore tempore ducimus dolores.'">css</button>
+    <button id="js" onclick="document.getElementById('content').innerHTML='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti vero eaque optio provident quasi perferendis facilis inventore tempore ducimus dolores.'">js</button>
+    <button id="node" onclick="document.getElementById('content').innerHTML='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti vero eaque optio provident quasi perferendis facilis inventore tempore ducimus dolores.'">node</button>
+    <button id="python" onclick="document.getElementById('content').innerHTML='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti vero eaque optio provident quasi perferendis facilis inventore tempore ducimus dolores.'">python</button>
+    <button onclick="data()">Click me to call function</button>
+    <div id="content"></div>
+<br>
+    <div id="me" onclick="this.style.fontSize='30px'">click me for magic</div>
+    <script>
+        var data=()=>{
+            document.getElementById('content').innerHTML=`HEllo 
+            how areyou ????`;
+        }
+    </script>
+</body>
+</html>

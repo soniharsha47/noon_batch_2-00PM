@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Keyword</title>
+</head>
+<body>
+
+    <div id="new" onclick="this.style.backgroundColor='red'">click me</div>
+    <button onclick="this.innerHTML='hey'">click</button>
+    <button onclick="this.innerHTML=''">click</button>
+
+    <script>
+        var alpha=prompt('Enter Alpha');
+
+        if(alpha=='A' || alpha=='a'){
+            for(row=0;row<5;row++){
+            for(col=0;col<5;col++){
+                if(row==0 || col==0 || row==2 || col==4){
+                    document.write('*');
+                }
+                else{
+                    document.write('&nbsp;&nbsp;');
+                }
+            }
+            document.write('<br>')
+        }
+        document.getElementById('new').innerHTML=`<pre>   for(row=0;row<5;row++){
+            for(col=0;col<5;col++){
+                if(row==0 || col==0 || row==2 || col==4){
+                    document.write('*');
+                }
+                else{
+                    document.write('&nbsp;&nbsp;');
+                }
+            }
+            document.write('<br>')
+        } </pre>`
+        }
+        else{
+            document.write('<h1>Invalid alpha</h1>');
+        }
+    </script>
+</body>
+</html>

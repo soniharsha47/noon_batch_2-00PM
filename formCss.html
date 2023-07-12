@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>Form CSS</title>
+        <style>
+            .container{
+                display: flex;
+                width: 100%;
+            }
+            .clable{
+                width: 30%;
+                /* background-color: aquamarine; */
+                /* border: 2px solid green; */
+            }
+            .cinput{
+                width: 50%;
+                /* border: 2px solid brown; */
+            }
+            form{
+                /* background-color: bisque; */
+                font-family: 'Times New Roman', Times, serif;
+                margin: 3%;
+            }
+            input{
+                background-color: bisque;
+                position: relative;
+            }
+            input[type=email]{
+                background-image: url(media/email.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position-x: 100%;
+            }
+            /* input:hover{
+                background-color: cyan;
+                border: none;
+            }
+             */
+            input[type=submit]{
+                padding: 1%;
+                border: none;
+                transition: 1s;
+            }
+            input[type=submit]:hover{
+                box-shadow: 2px 2px 5px rgb(171, 146, 116);
+            }
+
+            
+        </style>
+    </head>
+    <body>
+        <form>
+            <div class="container">
+                <div class="clable">
+                    <label>User name : </label>
+                </div>
+                <div class="cinput">
+                    <!-- <input type="text" maxlength="15"> -->
+                    <input type="number" min="15" max="45">
+
+                </div>
+            </div>
+                <div class="container"> 
+                    <div class="clable">
+                        <label>Email : </label>
+                    </div>
+                    <div class="cinput">
+                        <input type="email"  placeholder="zbc@xyc.com" autocomplete="on">
+                    </div>
+            </div>
+            <div class="container">
+                <div class="clable">
+                    <label>Contact No. : </label>
+                </div>
+                <div class="cinput">
+                    <hr style="width:30%;position: absolute;">
+                    <input type="tel" maxlength="10" minlength="5" style="width:10%;">
+                    <input type="date" min="2002-06-14" max="2023-05-15">
+                    <input type="tel" maxlength="10" minlength="5">
+                </div>
+        </div>
+        <div class="container">
+            <input type="submit">
+        </div>
+        </form>
+    </body>
+</html>

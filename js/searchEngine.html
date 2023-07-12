@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Engine</title>
+  </head>
+  <body>
+    <form name="mydata" onsubmit="return dataa()" method="post">
+      <label>Enter Value :</label>
+      <input type="search" name="usearc" id="usearc" />
+      <input type="submit" />
+    </form>
+    <div id="result"></div>
+
+    <script>
+      //  I ask data and they give me the total data
+      function dataa() {
+        var data = [
+          "01::Grras::Jaipur::52",
+          "02::Singh::New Delhi::49",
+          "03::Kalakar::Delhi::49",
+          "04::Actress::Kolkata::52",
+          "05::Cricketer::Jodhpur::52",
+          "06::Singer::Mumbai::70",
+          "07::Rapper::Lucknow::40",
+          "08::Dancer::Chennai::25",
+          "09::Actor::Bengaluru::35",
+          "10::Comedian::Hyderabad::35",
+          "11::Musician::Pune::35",
+          "12::Director::Ahmedabad::35",
+          "13::Writer::Banglore::35",
+          "14::Producer::Noida::35",
+          "15::Editor::Kochi::35",
+          "16::Photographer::Surat::35",
+          "17::Designer::Indore::35",
+          "18::Model::Patna::35",
+          "19::Chef::Guwahati::35",
+          "20::Painter::Agra::35",
+        ];
+
+        var searchData=document.forms['mydata']['usearc'].value;
+        for (i = 0; i < data.length; i++) {
+          // document.write(data[i]+'<br>');
+          // "roll::name::add::age"
+          // [roll,name,add,age]
+          var dataSP = data[i].split("::");
+          // document.write(dataSP+'<br>');
+          if (dataSP[0] == searchData || dataSP[1]==searchData || dataSP[2]==searchData || dataSP[3]==searchData) {
+            // document.write(data[i]+'<br>');
+            document.getElementById('result').innerHTML=`
+                ID is : ${dataSP[0]} <br>
+                Name is : ${dataSP[1]}<br>
+                Address is: ${dataSP[2]}<br>
+                Age is:${dataSP[3]}<br><hr>
+            `;
+          }
+        }
+        return false;
+      }
+      
+    </script>
+  </body>
+</html>

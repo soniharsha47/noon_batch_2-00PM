@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validations</title>
+</head>
+<body>
+    
+    <form action="" name="my_form" onsubmit="return valid()" method="post">
+        <!-- <input type="text" id="uname" required> -->
+        <input type="text" id="uname">
+        <span id="uerr"></span><br>
+        <!-- Must when u use OnSubmit Function -->
+        <input type="submit">
+    </form>
+
+    <script>
+        function valid(){
+            // Fetch the input value
+            // variable =document.forms['formName']['FieldName'].value;
+            var uname=document.forms['my_form']['uname'].value;
+            // document.write(uname);
+            // alert('Stop')
+
+            // Require Condition using js
+            if(uname==''){
+                // alert('Please Enter Your User Name ');
+                document.getElementById('uerr').innerHTML='<b>Pls enter user name</b>'
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

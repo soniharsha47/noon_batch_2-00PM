@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        #values{
+            text-align: center;
+            font-size: 25px;
+            color: blue;
+            background-color: yellowgreen;
+            height: 20vh;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="values"></div>
+    <h1 id="ans"></h1>
+    <script>
+        "use strict";
+        // var a=parseInt(prompt('Enter Value of A : '));
+        // var b=parseInt(prompt('Enter Value of B : '));
+        // var operator=prompt('Enter Operator : ');
+
+        var a=90;
+        var b=91;
+        var c=92;
+        // Convert string in to integer
+        // a=parseInt(a);
+        document.getElementById('values').innerHTML=`Value of A is ${a} <br> Value of B is ${b} `;
+
+        if(operator=='+'){
+            document.getElementById('ans').innerHTML=a+b;
+        }
+        else if(operator=='-'){
+            document.getElementById('ans').innerHTML=a-b;
+        }
+        else if(operator=='*'){
+            document.getElementById('ans').innerHTML=a*b;
+        }
+        else if(operator=='/'){
+            document.getElementById('ans').innerHTML=a/b;
+        }
+        else{
+            document.getElementById('ans').innerHTML='Invalid Operator';
+
+        }
+    </script>
+</body>
+</html>
